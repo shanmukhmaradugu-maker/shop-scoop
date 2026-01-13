@@ -3,24 +3,70 @@
 <head>
     <title>Shop Scoop</title>
     <style>
-        body { 
-            font-family: sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f4f4f4; 
+        /* This part handles the colors and layout */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f9f9f9; }
+        
+        header { background: #232f3e; color: white; padding: 15px; text-align: center; }
+        
+        .shop-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            padding: 40px; 
         }
-        header { 
-            background: #333; 
-            color: white; 
-            padding: 20px; 
+
+        .product-card { 
+            background: white; 
+            padding: 15px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
             text-align: center; 
         }
+
+        .product-card img { max-width: 100%; border-radius: 5px; }
+
+        .price { color: #B12704; font-size: 1.2rem; font-weight: bold; }
+
+        .buy-btn { 
+            background: #ffd814; 
+            border: 1px solid #fcd200; 
+            border-radius: 20px; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            font-weight: bold;
+        }
+        .buy-btn:hover { background: #f7ca00; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Welcome to Shop Scoop!</h1>
-        <p>Your favorite online store is coming soon.</p>
+        <h1>Shop Scoop</h1>
+        <p>Quality items delivered to you</p>
     </header>
+
+    <div class="shop-container">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <h3>Cool Sneakers</h3>
+            <p class="price">$45.00</p>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <h3>Smart Watch</h3>
+            <p class="price">$120.00</p>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Product 3">
+            <h3>Bluetooth Headphones</h3>
+            <p class="price">$89.00</p>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+    </div>
+
 </body>
 </html>
